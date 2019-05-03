@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Css/reset.css")" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        naglowek
+    </header>
+
+    <div> 
+        @RenderBody()
+    </div>
+
+    <footer>
+        stopka
+    </footer>
+
+    @RenderSection("ScriptsBottom", required: false)
+
+</body>
+</html>
