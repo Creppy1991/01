@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -9,9 +10,13 @@ namespace _01.Models
     {
         public int OrderID { get; set; }
         public string UserID { get; set; }
+        [StringLength(150)]
         public string FirstName { get; set; }
+        [StringLength(150)]
         public string LastName { get; set; }
         public string Address { get; set; }
+        [Required(ErrorMessage ="Wprowadz kod pocztowy i miasto")]
+        [StringLength(50)]
         public string CodeAndCity { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
@@ -20,5 +25,12 @@ namespace _01.Models
         public OrderState OrderState { get; set; }
         public decimal TotalPrice { get; set; }
         public List<OrderItem> OrderItems { get; set; }
+    }
+
+    public enum OrderState
+    {
+        New,
+
+        Shipped
     }
 }
