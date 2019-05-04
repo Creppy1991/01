@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -10,18 +9,23 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Css/reset.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Css/mainLayout.css")" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        naglowek
-    </header>
+    <nav>
+        <a href="@Url.Action("StaticContent","Home", new { viewname = "sklep" })">Sklep</a>
+        <a href="@Url.Action("StaticContent","Home", new { viewname = "biblioteka" })">Biblioteka</a>
+    </nav>
+    <div class="empty"></div>
 
-    <div> 
+    <div>
         @RenderBody()
     </div>
 
     <footer>
-        stopka
+        @*<a href="@Url.Action("StaticContent","Home", new { viewname = "onas" })">O nas</a>
+        <a href="@Url.Action("StaticContent","Home", new { viewname = "regulamin" })">Regulamin</a>
+        <a href="@Url.Action("StaticContent","Home", new { viewname = "kontakt" })">Kontakt</a>*@
     </footer>
 
     @RenderSection("ScriptsBottom", required: false)

@@ -1,0 +1,33 @@
+﻿html {
+    box-sizing: border-box;
+}
+
+body {
+    background: #303030;
+    color: #fff;
+}
+
+nav {
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.empty {
+    margin-top: 50px;
+}

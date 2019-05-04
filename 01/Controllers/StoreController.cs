@@ -6,16 +6,20 @@ using System.Web.Mvc;
 
 namespace _01.Controllers
 {
-    public class HomeController : Controller
+    public class StoreController : Controller
     {
-        // GET: Home
+        // GET: Store
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult StaticContent(String viewname)
+        public ActionResult Details(int id)
         {
-            return View(viewname);
+            return View();
+        }
+        public ActionResult List(string genrename)
+        {
+            return View();
         }
     }
 }
